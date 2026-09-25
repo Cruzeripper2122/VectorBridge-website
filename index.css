@@ -1,0 +1,214 @@
+@import "tailwindcss";
+
+:root {
+  --vb-blue: #1a6cf0;
+  --vb-cyan: #00c8ff;
+  --vb-dark: #060d1a;
+  --vb-navy: #0a1628;
+  --vb-card: #0d1f3c;
+}
+
+* {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: var(--vb-dark);
+  color: white;
+}
+
+.font-rajdhani {
+  font-family: 'Rajdhani', sans-serif;
+}
+
+/* Glow effects */
+.glow-blue {
+  box-shadow: 0 0 20px rgba(26, 108, 240, 0.4), 0 0 60px rgba(26, 108, 240, 0.15);
+}
+
+.glow-cyan {
+  box-shadow: 0 0 20px rgba(0, 200, 255, 0.4), 0 0 60px rgba(0, 200, 255, 0.15);
+}
+
+.text-glow-cyan {
+  text-shadow: 0 0 20px rgba(0, 200, 255, 0.6);
+}
+
+.text-glow-blue {
+  text-shadow: 0 0 20px rgba(26, 108, 240, 0.6);
+}
+
+/* Gradient text */
+.gradient-text {
+  background: linear-gradient(135deg, #fff 0%, #00c8ff 50%, #1a6cf0 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.gradient-text-blue {
+  background: linear-gradient(135deg, #fff 0%, #1a6cf0 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Card styles */
+.glass-card {
+  background: rgba(13, 31, 60, 0.7);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(26, 108, 240, 0.2);
+  transition: all 0.3s ease;
+}
+
+.glass-card:hover {
+  border-color: rgba(0, 200, 255, 0.5);
+  box-shadow: 0 0 30px rgba(0, 200, 255, 0.1);
+  transform: translateY(-4px);
+}
+
+/* Grid background */
+.grid-bg {
+  background-image: 
+    linear-gradient(rgba(26, 108, 240, 0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(26, 108, 240, 0.05) 1px, transparent 1px);
+  background-size: 60px 60px;
+}
+
+/* Animated gradient border */
+.gradient-border {
+  position: relative;
+  background: linear-gradient(var(--vb-navy), var(--vb-navy)) padding-box,
+              linear-gradient(135deg, #1a6cf0, #00c8ff) border-box;
+  border: 2px solid transparent;
+}
+
+/* Number counter style */
+.stat-number {
+  font-family: 'Rajdhani', sans-serif;
+  font-weight: 700;
+}
+
+/* Floating animation */
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+}
+
+.float-animation {
+  animation: float 3s ease-in-out infinite;
+}
+
+/* Pulse animation */
+@keyframes pulse-glow {
+  0%, 100% { box-shadow: 0 0 20px rgba(0, 200, 255, 0.3); }
+  50% { box-shadow: 0 0 40px rgba(0, 200, 255, 0.6); }
+}
+
+.pulse-glow {
+  animation: pulse-glow 2s ease-in-out infinite;
+}
+
+/* Scroll reveal */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in-up {
+  animation: fadeInUp 0.6s ease forwards;
+}
+
+/* Hero gradient */
+.hero-gradient {
+  background: radial-gradient(ellipse 80% 60% at 50% -10%, rgba(26, 108, 240, 0.25) 0%, transparent 70%),
+              radial-gradient(ellipse 50% 40% at 80% 50%, rgba(0, 200, 255, 0.1) 0%, transparent 60%),
+              linear-gradient(180deg, #060d1a 0%, #0a1628 100%);
+}
+
+/* Button styles */
+.btn-primary {
+  background: linear-gradient(135deg, #1a6cf0, #00c8ff);
+  transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+  background: linear-gradient(135deg, #1560d4, #00aadd);
+  box-shadow: 0 0 30px rgba(0, 200, 255, 0.4);
+  transform: translateY(-2px);
+}
+
+.btn-outline {
+  border: 1px solid rgba(0, 200, 255, 0.5);
+  color: #00c8ff;
+  transition: all 0.3s ease;
+}
+
+.btn-outline:hover {
+  background: rgba(0, 200, 255, 0.1);
+  border-color: #00c8ff;
+  box-shadow: 0 0 20px rgba(0, 200, 255, 0.2);
+}
+
+/* Nav blur */
+.nav-blur {
+  background: rgba(6, 13, 26, 0.85);
+  backdrop-filter: blur(20px);
+  border-bottom: 1px solid rgba(26, 108, 240, 0.15);
+}
+
+/* Process connector line */
+.process-line::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 100%;
+  width: 100%;
+  height: 1px;
+  background: linear-gradient(90deg, #1a6cf0, #00c8ff);
+  transform: translateY(-50%);
+}
+
+/* Testimonial card */
+.testimonial-card {
+  background: linear-gradient(135deg, rgba(13, 31, 60, 0.9), rgba(10, 22, 40, 0.9));
+  border: 1px solid rgba(26, 108, 240, 0.2);
+}
+
+/* Section divider */
+.divider-line {
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(0, 200, 255, 0.5), transparent);
+}
+
+/* Mobile menu */
+.mobile-menu {
+  background: rgba(6, 13, 26, 0.97);
+  backdrop-filter: blur(20px);
+}
+
+/* Scroll indicator */
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(6px); }
+}
+
+.bounce-scroll {
+  animation: bounce 1.5s ease-in-out infinite;
+}
+
+/* Orb effects */
+.orb-blue {
+  background: radial-gradient(circle, rgba(26, 108, 240, 0.3) 0%, transparent 70%);
+}
+
+.orb-cyan {
+  background: radial-gradient(circle, rgba(0, 200, 255, 0.2) 0%, transparent 70%);
+}
